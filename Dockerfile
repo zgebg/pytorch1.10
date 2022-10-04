@@ -4,7 +4,7 @@ RUN apt-key del 7fa2af80 && apt-key adv --fetch-keys https://developer.download.
 RUN apt-get update && apt-get install -y libgl1-mesa-glx libpci-dev curl nano psmisc zip git
 
 RUN conda install -y ipython
-RUN pip install ninja yacs cython matplotlib tqdm scipy torchsampler scikit-image opencv-python
+RUN pip install ninja yacs cython matplotlib tqdm scipy torchsampler scikit-image opencv-python numpy sklearn PIL argparse 
 
 RUN git clone https://github.com/cocodataset/cocoapi.git \
  && cd cocoapi/PythonAPI \
